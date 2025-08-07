@@ -42,7 +42,7 @@ export const MapComponent = ({ center, zoom, markerPosition }: MapComponentProps
 
             {markerPosition && (
                 <Marker position={markerPosition}>
-                    <Popup>Alerta Máximo</Popup>
+                    <Popup>Local</Popup>
                 </Marker>
             )}
         </MapContainer>

@@ -9,7 +9,7 @@ export interface SelectStationProps {
 export function SelectStation({ value, setAlterValue }: SelectStationProps) {
     return (
         <Select value={value} onValueChange={setAlterValue}>
-            <SelectTrigger className="w-full">
+            <SelectTrigger className="w-full border-none">
                 <SelectValue placeholder="Selecione uma estação..." />
             </SelectTrigger>
             <SelectContent>
@@ -22,7 +22,6 @@ export function SelectStation({ value, setAlterValue }: SelectStationProps) {
                     <SelectItem value="DCSC-00011">Rio dos Cedros</SelectItem>
                     <SelectItem value="DCSC-00007">Pomerode</SelectItem>
                     <SelectItem value="DCSC-00003">Ascurra</SelectItem>
-                    <SelectItem value="DCSC-00026">Blumenau</SelectItem>
                 </SelectGroup>
             </SelectContent>
         </Select>

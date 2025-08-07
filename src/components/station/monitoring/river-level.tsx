@@ -31,8 +31,8 @@ export default function RiverLevel({ station }: RiverLevelProps) {
 
                 <div className="flex flex-col gap-2">
                     <div className="flex flex-col justify-between">
-                        <h3 className="text-[1rem] font-medium text-gray-800">Última atualização</h3>
-                        <p>{calculeMoment(station.TimeStamp)}</p>
+                        <h3 className="text-sm font-medium text-gray-800">Última atualização</h3>
+                        <p className="text-sm text-gray-700">{calculeMoment(station.TimeStamp)}</p>
                     </div>
                 </div>
             </Card>

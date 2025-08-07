@@ -11,7 +11,7 @@ import { useHistorical } from "@/http/use-historical-rio"
 import { ChartAreaDefault } from "@/components/dashboard/area-chart-monitoring-level"
 
 export function Monitoring() {
-    const [stationCod, setStationCod] = useState('DCSC-00004')
+    const [stationCod, setStationCod] = useState('DCSC-00007')
     const { data: stationData, isLoading, isFetching, isError } = useStation(stationCod)
     const { data: historicalData, isLoading: isLoadingHistorical, isFetching: isLoadingFetching, isError: isLoadingError } = useHistorical(stationCod)
 
@@ -61,14 +61,14 @@ export function Monitoring() {
     return (
         <div className="">
             <h2 className="flex items-center gap-2 text-3xl font-bold mt-4"><Activity />Monitoramento em Tempo Real</h2>
-            <div className="w-full grid grid-cols-2 gap-4 mt-4">
-                <Card className="p-0">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+                <Card className="p-1">
                     <SelectStation value={stationCod} setAlterValue={handleAlterStation} />
                 </Card>
-                <Card className="w-full flex gap-2 items-center justify-center font-semibold text-sm p-0 border">
+                <Card className="w-full flex gap-2 items-center justify-center font-semibold text-sm p-3 border">
                     <div className="flex gap-2 items-center justify-center">
                         <MapPin size={15} />
-                        <span>Local: {data.tags[stationCod]["Name/Local"]}</span>
+                        <span className="font-semibold text-gray-700 text-sm">Local: {data.tags[stationCod]["Name/Local"]}</span>
                     </div>
                 </Card>
             </div>
@@ -81,7 +81,7 @@ export function Monitoring() {
                         <Card className="p-3 transition-transform duration-300 ease-in-out transform hover:scale-105">
                             <div className="flex flex-col justify-between">
                                 <h3 className="text-[1.1rem] font-semibold text-gray-800">Previsão de Chuva</h3>
-                                <p className="text-[.9rem] font-semibold text-gray-700">Nas próximas 48horas </p>
+                                <p className="text-sm text-gray-600">Nas próximas 48horas </p>
                             </div>
                             <div className="flex gap-2 items-center">
                                 <CloudHail width={25} height={25} />
