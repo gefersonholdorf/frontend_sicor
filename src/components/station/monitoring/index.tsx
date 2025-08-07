@@ -1,5 +1,5 @@
-import { Card, CardTitle } from "@/components/ui/card"
-import { Activity, CloudHail, LocateIcon, MapPin } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { Activity, CloudHail, MapPin } from "lucide-react"
 import { Skeleton } from "@/components/ui/skeleton"
 import { useStation } from "@/http/use-station"
 import RiverLevel from "./river-level"
