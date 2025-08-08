@@ -44,7 +44,7 @@ export function About() {
                     Funcionalidades
                 </h2>
 
-                <div className="mt-6 grid grid-cols-3 p-2 gap-10 list-disc list-inside text-gray-800 text-justify text-base">
+                <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 p-2 gap-10 list-disc list-inside text-gray-800 text-justify text-base">
                     <div className="hover:shadow-md p-3 rounded-3xl flex flex-col justify-center items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
                         <span className="font-semibold text-lg text-center">📡 Integração de Dados</span>
                         <span className="text-center mt-3">Integrar dados em tempo real da Defesa Civil via API GraphQL pública.</span>
